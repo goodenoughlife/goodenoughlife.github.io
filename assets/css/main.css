@@ -1236,7 +1236,6 @@ input, select, textarea {
 		-ms-box-sizing: content-box;
 		box-sizing: content-box;
 		background: #fff;
-		padding-right: 10em;
 		box-shadow: 0 0.1em 0.15em 0 rgba(0, 0, 0, 0.15);
 	}
 
@@ -1277,16 +1276,23 @@ input, select, textarea {
 
 		.poptrox-popup .caption {
 		    position: absolute;
-		    top: 0;
-		    right: 0;
-		    background: #ffffff;
-		    height: 100%;
-		    width: 20em;
-		    line-height: 1.3em;
-		    text-align: left;
+		    top: 50%; /* Center the caption vertically */
+		    left: 50%; /* Center the caption horizontally */
+		    transform: translate(-50%, -50%); /* Center the caption both horizontally and vertically */
+		    background: rgba(255, 255, 255, 0.7); /* Transparent white background */
+		    padding: 10px; /* Adjust padding as needed */
+		    line-height: 1.0em;
+		    text-align: center; /* Center-align the text */
 		    cursor: default;
-		    z-index: 1;
+		    z-index: 0;
 		    font-size: 0.6em;
+		    color: #000000; /* Set font color to black */
+		    text-shadow: 2px 2px 4px #ffffff; /* Add a white shadow with offsets and blur radius */
+		}
+
+		/* Apply a bright and blurry effect to the image */
+		.poptrox-popup img {
+		    filter: brightness(110%) blur(5px); /* Adjust the brightness and blur radius as needed */
 		}
 
 		.poptrox-popup .nav-next,
