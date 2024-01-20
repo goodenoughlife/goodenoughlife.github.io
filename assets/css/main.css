@@ -1236,7 +1236,7 @@ input, select, textarea {
 		-ms-box-sizing: content-box;
 		box-sizing: content-box;
 		background: #fff;
-		padding-right: 25em;
+		padding-right: 10em;
 		box-shadow: 0 0.1em 0.15em 0 rgba(0, 0, 0, 0.15);
 	}
 
@@ -1281,12 +1281,12 @@ input, select, textarea {
 		    right: 0;
 		    background: #ffffff;
 		    height: 100%;
-		    width: 30em;
+		    width: 20em;
 		    line-height: 1.3em;
 		    text-align: left;
 		    cursor: default;
 		    z-index: 1;
-		    font-size: 0.8em;
+		    font-size: 0.6em;
 		}
 
 		.poptrox-popup .nav-next,
