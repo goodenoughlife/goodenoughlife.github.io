@@ -1282,10 +1282,10 @@ input, select, textarea {
 		    background: rgba(255, 255, 255, 0.7); /* Transparent white background */
 		    padding: 10px; /* Adjust padding as needed */
 		    line-height: 1.0em;
-		    text-align: center; /* Center-align the text */
+		    text-align: left; /* Center-align the text */
 		    cursor: default;
 		    z-index: 0;
-		    font-size: 0.6em;
+		    font-size: 0.86em;
 		    color: #000000; /* Set font color to black */
 		    text-shadow: 2px 2px 4px #ffffff; /* Add a white shadow with offsets and blur radius */
 		}
@@ -1718,7 +1718,7 @@ input, select, textarea {
 			}
 
 			.gallery article:nth-last-child(20n) {
-				-moz-transition-delay: 0.95s;
+				-moz-transition-delay: 0.9TIST Parts5s;
 				-webkit-transition-delay: 0.95s;
 				-ms-transition-delay: 0.95s;
 				transition-delay: 0.95s;
@@ -1815,7 +1815,7 @@ input, select, textarea {
 		@media screen and (max-width: 480px) {
 
 			.gallery {
-				-moz-flex-wrap: nowrap;
+				-moz-flex-wrap: nowrap;TIST Parts
 				-webkit-flex-wrap: nowrap;
 				-ms-flex-wrap: nowrap;
 				flex-wrap: nowrap;
@@ -2274,6 +2274,17 @@ input, select, textarea {
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top right, center center;
+	}
+
+/* Add this CSS for better mobile visibility */
+	.pdf-container {
+	    overflow-x: auto; /* Enable horizontal scrolling if needed */
+	}
+
+	@media only screen and (max-width: 600px) {
+	    #pdfViewer {
+	        height: 600px; /* Adjust height for better visibility on smaller screens */
+	    }
 	}
 
 /* Contact */
