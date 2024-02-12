@@ -2181,12 +2181,12 @@ input, select, textarea {
 	}
 
 	#clickableImage {
-	    width: 400px; /* Set the initial width */
+	    width: 600px; /* Set the initial width */
 	    transition: width 0.5s ease; /* Add a smooth transition effect */
 	}
 
 	#toggleImage:checked + label #clickableImage {
-	    width: 600px; /* Set a much larger width when the checkbox is checked */
+	    width: 1200px; /* Set a much larger width when the checkbox is checked */
 	}
 
 	/* Hide the checkbox */
@@ -2205,12 +2205,12 @@ input, select, textarea {
 	}
 
 	#clickableImage2 {
-	    width: 400px; /* Set the initial width */
+	    width: 600px; /* Set the initial width */
 	    transition: width 0.5s ease; /* Add a smooth transition effect */
 	}
 
 	#toggleImage2:checked + label #clickableImage2 {
-	    width: 600px; /* Set a much larger width when the checkbox is checked */
+	    width: 1200px; /* Set a much larger width when the checkbox is checked */
 	}
 
 	/* Hide the checkbox */
@@ -2346,7 +2346,7 @@ input, select, textarea {
 
 	@media only screen and (max-width: 600px) {
 	    #pdfViewer {
-	        height: auto; /* Allow height to adjust according to content */
+	        height: 100%; /* Allow height to adjust according to content */
 	        max-width: 100%; /* Ensure the PDF viewer fits the screen width */
 	    }
 	}
