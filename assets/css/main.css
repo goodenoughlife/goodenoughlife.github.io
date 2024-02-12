@@ -1289,7 +1289,7 @@ input, select, textarea {
 		    font-size: 1em;
 		    color: #000000; /* Set font color to black */
 		    text-shadow: 2px 2px 4px #ffffff; /* Add a white shadow with offsets and blur radius */
-		    width: 500px; /* Adjust width as needed */
+		    width: 400px; /* Adjust width as needed */
 		}
 
 		.poptrox-popup .caption:not(:empty) {
