@@ -2172,16 +2172,15 @@ input, select, textarea {
 
 /* Clickable Image */
 
-
 	#imageSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    text-align: center; /* Center text within the section */
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center; /* Center items horizontally */
+	    text-align: center; /* Center text within the section */
 	}
 
 	#clickableImage {
-	    width: 600px; /* Set the initial width */
+	    width: 800px; /* Set the initial width */
 	    transition: width 0.5s ease; /* Add a smooth transition effect */
 	}
 
@@ -2194,18 +2193,17 @@ input, select, textarea {
 	    display: none;
 	}
 
-/* Clickable Image 2 */
-
+	/* Clickable Image 2 */
 
 	#imageSection2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    text-align: center; /* Center text within the section */
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center; /* Center items horizontally */
+	    text-align: center; /* Center text within the section */
 	}
 
 	#clickableImage2 {
-	    width: 600px; /* Set the initial width */
+	    width: 800px; /* Set the initial width */
 	    transition: width 0.5s ease; /* Add a smooth transition effect */
 	}
 
@@ -2216,6 +2214,14 @@ input, select, textarea {
 	/* Hide the checkbox */
 	#toggleImage2 {
 	    display: none;
+	}
+
+	/* Media query for smaller screens */
+	@media only screen and (max-width: 600px) {
+	    #clickableImage,
+	    #clickableImage2 {
+	        width: 400px; /* Set the width to 400px on smaller screens */
+	    }
 	}
 
 /* Footer */
@@ -2340,14 +2346,23 @@ input, select, textarea {
 
 	/* Add this CSS for better mobile visibility */
 	.pdf-container {
-	    overflow-x: scroll; /* Enable horizontal scrolling */
-	    overflow-y: auto; /* Enable vertical scrolling */
+	    overflow-x: auto; /* Enable horizontal scrolling only when necessary */
+	    overflow-y: hidden; /* Hide vertical scrolling */
+	    white-space: nowrap; /* Prevent line breaks */
+	    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
 	}
 
+	/* Media query for smaller screens */
 	@media only screen and (max-width: 600px) {
+	    .pdf-container {
+	        overflow-x: auto; /* Enable horizontal scrolling only when necessary */
+	        overflow-y: auto; /* Enable vertical scrolling */
+	        white-space: normal; /* Allow line breaks */
+	    }
+
 	    #pdfViewer {
-	        height: 100%; /* Allow height to adjust according to content */
-	        max-width: 100%; /* Ensure the PDF viewer fits the screen width */
+	        width: 100%; /* Ensure the PDF viewer fits the screen width */
+	        max-height: 100vh; /* Limit height to the viewport height */
 	    }
 	}
 
