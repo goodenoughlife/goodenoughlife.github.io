@@ -2180,7 +2180,7 @@ input, select, textarea {
 	}
 
 	#clickableImage {
-	    width: 800px; /* Set the initial width */
+	    width: 1000px; /* Set the initial width */
 	    transition: width 0.5s ease; /* Add a smooth transition effect */
 	}
 
@@ -2203,7 +2203,7 @@ input, select, textarea {
 	}
 
 	#clickableImage2 {
-	    width: 800px; /* Set the initial width */
+	    width: 1000px; /* Set the initial width */
 	    transition: width 0.5s ease; /* Add a smooth transition effect */
 	}
 
