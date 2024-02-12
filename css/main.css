@@ -1275,24 +1275,30 @@ input, select, textarea {
 			}
 
 		.poptrox-popup .caption {
+		    display: none; /* Initially hide the caption */
 		    position: absolute;
 		    top: 50%; /* Center the caption vertically */
 		    left: 50%; /* Center the caption horizontally */
 		    transform: translate(-50%, -50%); /* Center the caption both horizontally and vertically */
-		    background: rgba(255, 255, 255, 0.7); /* Transparent white background */
+		    background: rgba(255, 255, 255, 0.95); /* Transparent white background */
 		    padding: 10px; /* Adjust padding as needed */
 		    line-height: 1.0em;
 		    text-align: left; /* Center-align the text */
 		    cursor: default;
 		    z-index: 0;
-		    font-size: 0.86em;
+		    font-size: 1em;
 		    color: #000000; /* Set font color to black */
 		    text-shadow: 2px 2px 4px #ffffff; /* Add a white shadow with offsets and blur radius */
+		    width: 500px; /* Adjust width as needed */
+		}
+
+		.poptrox-popup .caption:not(:empty) {
+		    display: block; /* Display the caption if it's not empty */
 		}
 
 		/* Apply a bright and blurry effect to the image */
 		.poptrox-popup img {
-		    filter: brightness(110%) blur(5px); /* Adjust the brightness and blur radius as needed */
+		    filter: brightness(110%); /* Adjust the brightness and blur radius as needed */
 		}
 
 		.poptrox-popup .nav-next,
@@ -2164,6 +2170,54 @@ input, select, textarea {
 
 		}
 
+/* Clickable Image */
+
+
+	#imageSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text within the section */
+	}
+
+	#clickableImage {
+	    width: 800px; /* Set the initial width */
+	    transition: width 0.5s ease; /* Add a smooth transition effect */
+	}
+
+	#toggleImage:checked + label #clickableImage {
+	    width: 1200px; /* Set a much larger width when the checkbox is checked */
+	}
+
+	/* Hide the checkbox */
+	#toggleImage {
+	    display: none;
+	}
+
+/* Clickable Image 2 */
+
+
+	#imageSection2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text within the section */
+	}
+
+	#clickableImage2 {
+	    width: 800px; /* Set the initial width */
+	    transition: width 0.5s ease; /* Add a smooth transition effect */
+	}
+
+	#toggleImage2:checked + label #clickableImage2 {
+	    width: 1200px; /* Set a much larger width when the checkbox is checked */
+	}
+
+	/* Hide the checkbox */
+	#toggleImage2 {
+	    display: none;
+	}
+
 /* Footer */
 
 	#footer {
@@ -2275,15 +2329,25 @@ input, select, textarea {
 		background-attachment: fixed, fixed;
 		background-position: top right, center center;
 	}
+/* Reasoning */
 
-/* Add this CSS for better mobile visibility */
+	#reasoning {
+		background: url("images/overlay.png"), url("../../images/struct_dissociation.jpg");
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top right, center center;
+	}
+
+	/* Add this CSS for better mobile visibility */
 	.pdf-container {
-	    overflow-x: auto; /* Enable horizontal scrolling if needed */
+	    overflow-x: scroll; /* Enable horizontal scrolling */
+	    overflow-y: auto; /* Enable vertical scrolling */
 	}
 
 	@media only screen and (max-width: 600px) {
 	    #pdfViewer {
-	        height: 600px; /* Adjust height for better visibility on smaller screens */
+	        height: auto; /* Allow height to adjust according to content */
+	        max-width: 100%; /* Ensure the PDF viewer fits the screen width */
 	    }
 	}
 
