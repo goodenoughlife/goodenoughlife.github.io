@@ -2217,16 +2217,16 @@ input, select, textarea {
 	}
 
 	/* Media query for smaller screens */
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 400px) {
 	    #clickableImage,
 	    #clickableImage2 {
 	        width: 400px; /* Set the width to 400px on smaller screens */
 	    }
 	}
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 400px) {
 	    #toggleImage,
 	    #ctoggleImage2 {
-	        width: 420px; /* Set the width to 400px on smaller screens */
+	        width: 400px; /* Set the width to 400px on smaller screens */
 	    }
 	}
 
@@ -2366,6 +2366,12 @@ input, select, textarea {
 	        white-space: normal; /* Allow line breaks */
 	    }
 
+	    /* Hide the download link on smaller screens */
+	    .pdf-container a {
+	        display: none;
+	    }
+
+	    /* Adjustments for PDF viewer container on smaller screens */
 	    #pdfViewer {
 	        width: 100%; /* Ensure the PDF viewer fits the screen width */
 	        max-height: 100vh; /* Limit height to the viewport height */
