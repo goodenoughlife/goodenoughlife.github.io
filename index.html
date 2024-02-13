@@ -186,25 +186,10 @@
 
 			<script>
 			function changePDF() {
-			    var selector = document.getElementById("pdfSelector");
-			    var pdfViewer = document.getElementById("pdfViewer");
-			    var selectedPDF = selector.value;
-
-			    // Check if the user agent indicates a mobile device
-			    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-			    
-			    if (isMobile) {
-			        // If it's a mobile device, offer a download link instead of embedding the PDF
-			        var downloadLink = document.createElement('a');
-			        downloadLink.href = "pdf/" + selectedPDF;
-			        downloadLink.download = selectedPDF;
-			        downloadLink.innerHTML = "Download PDF";
-			        pdfViewer.innerHTML = ''; // Clear existing content
-			        pdfViewer.appendChild(downloadLink);
-			    } else {
-			        // If it's not a mobile device, embed the PDF
-			        pdfViewer.src = "pdf/" + selectedPDF;
-			    }
+				var selector = document.getElementById("pdfSelector");
+				var pdfViewer = document.getElementById("pdfViewer");
+				var selectedPDF = selector.value;
+				pdfViewer.src = "pdf/" + selectedPDF;
 			}
 			</script>
 
