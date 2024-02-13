@@ -2171,7 +2171,6 @@ input, select, textarea {
 		}
 
 /* Clickable Image */
-
 	#imageSection {
 	    display: flex;
 	    flex-direction: column;
@@ -2194,7 +2193,6 @@ input, select, textarea {
 	}
 
 	/* Clickable Image 2 */
-
 	#imageSection2 {
 	    display: flex;
 	    flex-direction: column;
@@ -2222,11 +2220,10 @@ input, select, textarea {
 	    #clickableImage2 {
 	        width: 400px; /* Set the width to 400px on smaller screens */
 	    }
-	}
-	@media only screen and (max-width: 800px) {
+	    /* Remove the checkbox for mobile */
 	    #toggleImage,
-	    #ctoggleImage2 {
-	        width: 420px; /* Set the width to 400px on smaller screens */
+	    #toggleImage2 {
+	        display: none;
 	    }
 	}
 
